@@ -16,9 +16,10 @@ body{
 } 
 
 h1{
+    text-align: center;
     font-weight: 500;
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .main{
@@ -26,7 +27,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-	padding:35px 30px;
+	padding:20px 30px;
     background-color:white;
 }
 
@@ -131,6 +132,7 @@ input:checked + .slider:before{
 }
 
 button{
+    cursor: pointer;
     margin-top: 30px;
     color: white;
     background: #8A4893;
@@ -140,3 +142,41 @@ button{
     height: 52px;
     width: 429px;
 }
+
+button:disabled{
+    background: #8B8B8B;
+    transition: 0.5s linear;
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 920px) {
+
+    h1{
+        text-align: left;
+        font-size: 25px;
+        padding: 10px 33px;
+    }
+
+    .main {
+      padding: 0;
+    }
+  
+    .row {
+      width: 90%;
+    }
+    
+    .text{
+        width: 8rem;
+        position: relative;
+        left: 0.3rem;
+    }
+  
+    .right {
+      width: 9rem;
+    }
+  
+    button {
+      width: 100%;
+      width: 350px;
+    }
+  }
